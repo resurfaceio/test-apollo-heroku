@@ -8,6 +8,7 @@ To run locally:
 ```
 npm install
 npm start
+heroku local
 ```
 
 To test:
