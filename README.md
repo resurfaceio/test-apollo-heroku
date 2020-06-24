@@ -14,5 +14,5 @@ heroku local
 To test:
 
 ```
-curl 'http://localhost:8080/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' --data-binary '{"query":"# Write your query or mutation here\n{\n  hero {\n    name\n    # Queries can have comments!\n    friends {\n      name\n    }\n  }\n}"}' --compressed
+curl 'http://localhost:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' --data-binary '{"query":"# Write your query or mutation here\n{\n  hero {\n    name\n    # Queries can have comments!\n    friends {\n      name\n    }\n  }\n}"}' --compressed
 ```
