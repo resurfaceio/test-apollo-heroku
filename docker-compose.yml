@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  resurface:
+    image: docker.resurface.io/release/pilot
+    container_name: apollo_resurface
+    ports:
+      - '4000:4000'
+      - '4001:4001'
+      - '4002:4002'
+
+  apollo:
+    image: test-apollo:latest
+    container_name: apollo
+    command: npm start
+    ports:
+      - '80:5000'
+    env_file:
+      - .env

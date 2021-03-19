@@ -13,7 +13,6 @@ app.use('*', cors());
 
 const resurfaceio = require('resurfaceio-logger');
 resurfaceio.HttpLoggerForExpress.add(app, {
-    url: 'http://localhost:9000/api/listener/PnyfkIT7NjlvEIAmRyb28jrJKCW0OUIZ', 
     rules: 'include debug'
 });
 
