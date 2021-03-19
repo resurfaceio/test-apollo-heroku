@@ -1,18 +1,26 @@
-# test-apollo-heroku
-Apollo test app for Heroku
+# test-apollo
+Example GraphQL API built with Apollo
 
-This was cloned from Apollo's [Star Wars example server](https://github.com/apollographql/starwars-server) app at commit `c8760cb`. We prefer to keep our own copy to keep our tests from breaking without warning.
+This was cloned from Apollo's [Star Wars example server](https://github.com/apollographql/starwars-server) app at commit `c8760cb`.
 
-To run locally:
+## Requirements
+
+* Install `docker` and `docker-compose`
+* Sign up for [Resurface Pilot Edition](https://resurface.io/pilot-edition) access
+
+## Ports Used
+
+* 80 - GraphQL API
+* 4002 - Resurface API Explorer
+* 4001 - Resurface microservice
+* 4000 - Trino database UI
+
+## Deploy Locally
 
 ```
-npm install
-npm start
-heroku local
-```
-
-To test:
-
-```
-curl 'http://localhost:5000/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' --data-binary '{"query":"# Write your query or mutation here\n{\n  hero {\n    name\n    # Queries can have comments!\n    friends {\n      name\n    }\n  }\n}"}' --compressed
+make start     # rebuild and start containers
+make ping      # make simple ping request
+make bash      # open shell session
+make logs      # follow container logs
+make stop      # halt and remove containers
 ```
