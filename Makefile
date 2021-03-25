@@ -1,7 +1,7 @@
 PROJECT_NAME=apollo
 
 start:
-	@docker stop resurface
+	@docker stop resurface || true
 	@docker build -t test-apollo --no-cache .
 	@docker-compose up --detach
 
