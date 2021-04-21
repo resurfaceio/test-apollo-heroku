@@ -6,7 +6,7 @@ This was cloned from Apollo's [Star Wars example server](https://github.com/apol
 ## Requirements
 
 * Install `docker` and `docker-compose`
-* Sign up for [Resurface Pilot Edition](https://resurface.io/pilot-edition) access
+* Install [Resurface Pilot Edition](https://resurface.io/pilot-installation)
 
 ## Ports Used
 
