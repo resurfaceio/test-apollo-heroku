@@ -18,3 +18,7 @@ logs:
 
 ping:
 	@curl 'http://localhost/graphql' -H 'Content-Type: application/json' --data-binary '{"query":"# Write your query or mutation here\n{\n  hero {\n    name\n    # Queries can have comments!\n    friends {\n      name\n    }\n  }\n}"}'
+
+restart:
+	@docker-compose stop
+	@docker-compose up
