@@ -12,7 +12,6 @@ services:
   apollo:
     image: test-apollo
     container_name: apollo
-    command: npm start
     ports:
       - '80:5000'
     env_file:

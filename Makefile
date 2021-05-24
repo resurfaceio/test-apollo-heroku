@@ -8,7 +8,7 @@ start:
 stop:
 	@docker-compose stop
 	@docker-compose down --volumes
-	@docker image rmi -f test-apollo:latest
+	@docker image rmi -f test-apollo
 
 bash:
 	@docker exec -it apollo bash
